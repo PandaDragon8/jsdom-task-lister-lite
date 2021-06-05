@@ -2,7 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const todos = []
-
+      // "laundry": {
+      //   name: "",
+      //   priority: "",
+      //   dueDate: ""
+      // }
 
     //form and relevant input fields
     const newTaskForm = document.getElementById("create-task-form");
@@ -33,10 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
         elem.remove()
       })
 
-      elem.appendChild(deleteBtn)
-      document.getElementById("tasks").appendChild(elem)
+      // elem.appendChild(deleteBtn)
+      // document.getElementById("tasks").appendChild(elem)
 
-      newTaskForm.reset()
+      // newTaskForm.reset()
     });
 });
 
@@ -68,12 +72,12 @@ function renderTodos(todos) {
     elem.style.color = getBackgroundColorBasedOnPriority(todo.priority)
 
     // // add delete button
-    const deleteBtn = document.createElement('button')
-    deleteBtn.textContent = 'X'
-    deleteBtn.addEventListener('click', () => {
-      elem.remove()
-    })
-    elem.appendChild(deleteBtn)
+    // const deleteBtn = document.createElement('button')
+    // deleteBtn.textContent = 'X'
+    // deleteBtn.addEventListener('click', () => {
+    //   elem.remove()
+    // })
+    // elem.appendChild(deleteBtn)
 
     document.getElementById("tasks").appendChild(elem)
   })
